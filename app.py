@@ -296,6 +296,7 @@ Nilai RSRP selalu negatif. Semakin mendekati 0, semakin kuat sinyalnya. Misalnya
         "color"   : "#0000FF",
         "unit"    : "dB",
         "desc"    : """
+        
 **Apa itu RSRQ?**
 RSRQ mengukur kualitas sinyal referensi yang diterima dengan mempertimbangkan interferensi dan noise yang ada di jaringan. Berbeda dengan RSRP yang hanya mengukur kekuatan sinyal, RSRQ menggambarkan "kebersihan" sinyal dari gangguan sekitar.
 
@@ -315,6 +316,7 @@ Nilai RSRQ juga selalu negatif. Semakin mendekati 0, semakin baik kualitasnya. R
         "color"   : "#5032DC",
         "unit"    : "dB",
         "desc"    : """
+        
 **Apa itu SINR?**
 SINR adalah rasio antara kekuatan sinyal yang diinginkan terhadap total interferensi ditambah noise yang ada di sekitarnya. Ini merupakan salah satu KPI paling kritis dalam menentukan kualitas koneksi data secara aktual.
 
@@ -334,6 +336,7 @@ Berbeda dengan RSRP dan RSRQ, SINR bisa bernilai positif. Nilai di atas 20 dB sa
         "color"   : "#2E00FE",
         "unit"    : "Mbps",
         "desc"    : """
+        
 **Apa itu Throughput?**
 Throughput adalah kecepatan transfer data aktual yang berhasil diterima atau dikirim oleh pengguna dalam jaringan, diukur dalam Mbps. Ini berbeda dengan kapasitas teoritis jaringan — throughput mencerminkan performa nyata yang dirasakan pengguna.
 
@@ -353,6 +356,7 @@ Tidak ada nilai negatif. Semakin tinggi semakin baik. Untuk LTE standar, through
         "color"   : "#059669",
         "unit"    : "",
         "desc"    : """
+        
 **Apa itu ECI?**
 ECI (E-UTRAN Cell Identifier) adalah identitas unik yang diberikan kepada setiap cell dalam jaringan LTE. ECI terdiri dari eNodeB ID dan Cell ID, sehingga setiap sektor antena di setiap base station memiliki identitas yang berbeda di seluruh jaringan.
 
@@ -372,6 +376,7 @@ ECI biasanya ditampilkan dalam format "eNodeB ID / Cell ID", misalnya "392068 / 
         "color"   : "#DC2626",
         "unit"    : "",
         "desc"    : """
+        
 **Apa itu PCI?**
 PCI (Physical Cell Identity) adalah identitas fisik layer yang digunakan perangkat untuk membedakan sinyal dari cell-cell yang berbeda di udara. Nilai PCI berkisar antara 0 hingga 503, dan dialokasikan oleh operator saat perencanaan jaringan.
 
@@ -391,6 +396,7 @@ Dalam drive test, PCI digunakan untuk mengidentifikasi cell serving dan memvalid
         "color"   : "#0284C7",
         "unit"    : "",
         "desc"    : """
+        
 **Apa itu RF Mode?**
 RF Mode menunjukkan teknologi atau mode radio yang sedang aktif digunakan oleh perangkat dalam jaringan. Mode ini bisa berupa LTE (4G), NR (5G New Radio), atau mode IDLE ketika perangkat tidak aktif melakukan komunikasi data.
 
