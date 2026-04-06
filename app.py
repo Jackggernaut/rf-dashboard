@@ -866,3 +866,29 @@ st.markdown(
     "</div>",
     unsafe_allow_html=True
 )
+
+st.markdown("""
+<style>
+
+/* FONT UTAMA (AMAN) */
+body, .stApp {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Fix Material Icons supaya tidak jadi teks */
+.material-icons,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp,
+[class*="material-icons"] {
+    font-family: 'Material Icons' !important;
+    font-style: normal !important;
+}
+
+/* Fix tombol sidebar mobile */
+[data-testid="stSidebarCollapseButton"] span {
+    font-family: 'Material Icons' !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
