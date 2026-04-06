@@ -276,6 +276,7 @@ KPI_INFO = {
         "color"   : "#5032DC",
         "unit"    : "dBm",
         "desc"    : """
+        
 **Apa itu RSRP?**
 RSRP adalah indikator utama yang mengukur kekuatan sinyal LTE yang diterima perangkat dari satu cell tertentu (Reference Signal). Nilai ini diukur dalam satuan dBm dan mewakili daya sinyal pilot yang dikirimkan oleh eNodeB (base station).
 
