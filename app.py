@@ -716,7 +716,7 @@ KPI_COLORS_MAP = {
 }
 
 for kpi, info in KPI_INFO.items():
-    with st.expander(f"📊 {kpi} — {info['full']}", expanded=False):
+    with st.expander(f"{kpi} — {info['full']}", expanded=False):
 
         st.markdown(f"""
         <div class="kpi-def-card">
