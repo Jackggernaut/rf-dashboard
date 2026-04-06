@@ -718,104 +718,38 @@ for kpi, info in KPI_INFO.items():
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown(
-        f"""<style>
-        div[data-testid="stButton"] > button[kind="secondary"]#btn_{kpi} {{
-            background: #FFFFFF !important;
-            border: 1px solid #E0E7FF !important;
-            border-radius: {"0 0 0 0" if is_open else "12px"} !important;
-            border-radius: {"12px 12px 0 0" if is_open else "12px"} !important;
-            color: #1E1B4B !important;
-            font-size: 14px !important;
-            font-weight: 600 !important;
-            text-align: left !important;
-            padding: 12px 16px !important;
-        }}
-        </style>""",
-        unsafe_allow_html=True
-    )
+    for kpi, info in KPI_INFO.items():
+    with st.expander(f"📊 {kpi} — {info['full']}", expanded=False):
 
-    if st.button(
-        f"{kpi}  —  {info['full']}   {arrow}",
-        key=f"btn_{kpi}",
-        use_container_width=True,
-    ):
-        st.session_state[key] = not is_open
-        st.rerun()
+        st.markdown(f"""
+        <div class="kpi-def-card">
+            <div class="kpi-def-name">{kpi}</div>
+            <div class="kpi-def-full">{info['full']}</div>
+            <div class="kpi-def-body">{info['desc']}</div>
+        </div>
+        """, unsafe_allow_html=True)
 
-    if is_open:
-        st.markdown(
-            "<div style='background:#FFFFFF;border:1px solid #E0E7FF;"
-            "border-top:none;border-radius:0 0 12px 12px;"
-            "padding:20px 24px;margin-bottom:12px'>",
-            unsafe_allow_html=True,
-        )
-        col_left, col_right = st.columns([3, 1])
+        # OPTIONAL: grafik
+        if info["numeric"] and not df_all.empty and kpi in df_all["KPI_NAME"].values:
+            st.markdown("---")
+            st.markdown(f"**📊 Rata-rata {kpi} per Project**")
 
-        with col_left:
-            st.markdown(
-                f"<div style='font-size:17px;font-weight:700;color:#1E1B4B;margin-bottom:2px'>{kpi}</div>"
-                f"<div style='font-size:12px;color:#6366F1;font-weight:500;margin-bottom:12px'>{info['full']}</div>",
-                unsafe_allow_html=True
+            df_kpi_all = df_all[df_all["KPI_NAME"] == kpi].copy()
+            df_avg_proj = (
+                df_kpi_all.groupby("Project_Clean")["VALUE_NUM"]
+                .mean()
+                .reset_index()
+                .rename(columns={"VALUE_NUM": f"Avg {kpi}"})
             )
-            st.markdown(info["desc"])
 
-            if info["numeric"] and not df_all.empty and kpi in df_all["KPI_NAME"].values:
-                st.markdown("---")
-                st.markdown(f"**📊 Rata-rata {kpi} per Project**")
-                df_kpi_all = df_all[df_all["KPI_NAME"] == kpi].copy()
-                df_avg_proj = (
-                    df_kpi_all.groupby("Project_Clean")["VALUE_NUM"]
-                    .mean()
-                    .reset_index()
-                    .rename(columns={"VALUE_NUM": f"Avg {kpi}"})
-                    .sort_values(f"Avg {kpi}", ascending=(kpi in ["SINR", "Throughput"]))
-                )
-                bar_color = KPI_COLORS_MAP.get(kpi, "#4F46E5")
-                fig_bar = px.bar(
-                    df_avg_proj,
-                    x="Project_Clean",
-                    y=f"Avg {kpi}",
-                    text=df_avg_proj[f"Avg {kpi}"].apply(lambda x: f"{x:.1f}"),
-                    labels={"Project_Clean": "Project", f"Avg {kpi}": f"Rata-rata {kpi} ({info['unit']})"},
-                    color_discrete_sequence=[bar_color],
-                )
-                fig_bar.update_layout(
-                    paper_bgcolor="#FFFFFF",
-                    plot_bgcolor="#F8F9FF",
-                    font=dict(color="#374151", family="DM Sans, sans-serif"),
-                    showlegend=False,
-                    xaxis=dict(tickangle=30, tickfont=dict(size=9), title=""),
-                    yaxis=dict(title=f"{kpi} ({info['unit']})"),
-                    margin=dict(l=10, r=10, t=10, b=80),
-                    height=320,
-                )
-                fig_bar.update_traces(textposition="outside", marker_line_width=0)
-                st.plotly_chart(fig_bar, use_container_width=True)
-
-        with col_right:
-            st.markdown(
-                "<div style='font-size:13px;font-weight:700;color:#1E1B4B;margin-bottom:10px'>Threshold</div>",
-                unsafe_allow_html=True
+            fig_bar = px.bar(
+                df_avg_proj,
+                x="Project_Clean",
+                y=f"Avg {kpi}",
+                text=df_avg_proj[f"Avg {kpi}"].apply(lambda x: f"{x:.1f}")
             )
-            for level, val in info["threshold"].items():
-                if level in ["Excellent", "Good", "Valid", "Normal", "LTE Connected", "NR Connected"]:
-                    color = "#059669"
-                elif level in ["Poor", "No Signal", "Collision", "Confusion", "Anomali"]:
-                    color = "#DC2626"
-                else:
-                    color = "#D97706"
-                st.markdown(
-                    f"<div style='background:#F8F9FF;border-left:3px solid {color};"
-                    f"padding:6px 10px;border-radius:4px;margin-bottom:6px;"
-                    f"font-size:12px;color:#1E1B4B'>"
-                    f"<b style='color:{color}'>{level}</b><br>"
-                    f"<span style='color:#475569'>{val}</span></div>",
-                    unsafe_allow_html=True
-                )
-        st.markdown("</div>", unsafe_allow_html=True)
-    else:
-        st.markdown("<div style='margin-bottom:4px'></div>", unsafe_allow_html=True)
+
+            st.plotly_chart(fig_bar, use_container_width=True)
 
 
 # ============================================================
