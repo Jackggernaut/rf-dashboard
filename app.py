@@ -51,7 +51,9 @@ st.markdown("""
     }
 
     /* DM Sans untuk semua teks */
-    * { font-family: 'DM Sans', sans-serif !important; }
+    html, body, .stApp, [data-testid="stAppViewContainer"] {
+    font-family: 'DM Sans', sans-serif !important;
+    }
 
     /* Sembunyikan header sidebar TANPA hapus nav links */
     [data-testid="stSidebarHeader"] { display: none !important; }
