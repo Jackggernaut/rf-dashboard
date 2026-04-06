@@ -709,12 +709,14 @@ KPI_COLORS_MAP = {
 }
 
 for kpi, info in KPI_INFO.items():
-    key = f"expand_{kpi}"
-    if key not in st.session_state:
-        st.session_state[key] = False
-
-    is_open = st.session_state[key]
-    arrow   = "▲" if is_open else "▼"
+    with st.expander(f"📊 {kpi} — {info['full']}", expanded=False):
+        st.markdown(f"""
+        <div class="kpi-def-card">
+            <div class="kpi-def-name">{kpi}</div>
+            <div class="kpi-def-full">{info['full']}</div>
+            <div class="kpi-def-body">{info['desc']}</div>
+        </div>
+        """, unsafe_allow_html=True)
 
     st.markdown(
         f"""<style>
