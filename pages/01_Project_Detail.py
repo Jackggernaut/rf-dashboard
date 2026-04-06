@@ -45,10 +45,11 @@ st.markdown("""
         color: #1E1B4B !important;
     }
 
-    * { font-family: 'DM Sans', sans-serif !important; }
 
     /* DM Sans untuk semua teks, kecuali Material Icons font */
-    * { font-family: 'DM Sans', sans-serif !important; }
+    html, body, .stApp, [data-testid="stAppViewContainer"] {
+    font-family: 'DM Sans', sans-serif !important;
+    }
     .material-icons, .material-icons-sharp, .material-icons-outlined,
     [class*="material-icon"] {
         font-family: 'Material Icons' !important;
