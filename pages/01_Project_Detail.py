@@ -338,26 +338,33 @@ current_page = os.path.basename(__file__)
 
 with st.sidebar:
 
-    st.markdown("<div class='sidebar-title'>Menu Utama</div>", unsafe_allow_html=True)
+    # ===== MENU UTAMA =====
+    st.markdown(
+        "<div style='font-size:13px;font-weight:700;color:#4F46E5;margin-bottom:12px;letter-spacing:0.5px'>MENU UTAMA</div>",
+        unsafe_allow_html=True
+    )
 
     # Navigation
     if current_page == "app.py":
-        st.markdown("**Main Dashboard**")
+        st.markdown("<div style='font-weight:700;color:#1E1B4B'>Main Dashboard</div>", unsafe_allow_html=True)
     else:
         st.page_link("app.py", label="Main Dashboard")
 
     if current_page == "01_Project_Detail.py":
-        st.markdown("**Project Detail**")
+        st.markdown("<div style='font-weight:700;color:#1E1B4B'>Project Detail</div>", unsafe_allow_html=True)
     else:
         st.page_link("pages/01_Project_Detail.py", label="Project Detail")
 
-    # Title project
+    st.markdown("<div style='margin-top:6px'></div>", unsafe_allow_html=True)
+    st.divider()
+
+    # ===== HEADER PAGE =====
     st.markdown(
-        "<div style='font-size:16px;font-weight:800;color:#000000;margin-bottom:4px'>Project Detail</div>",
+        "<div style='font-size:16px;font-weight:800;color:#1E1B4B;margin-bottom:2px'>Project Detail</div>",
         unsafe_allow_html=True
     )
     st.markdown(
-        "<div style='font-size:11px;color:#000000;margin-bottom:16px'>PT NexWave · Jan–Feb 2026</div>",
+        "<div style='font-size:11px;color:#64748B;margin-bottom:14px'>PT NexWave · Jan–Feb 2026</div>",
         unsafe_allow_html=True
     )
 
