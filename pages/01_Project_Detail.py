@@ -930,3 +930,14 @@ body, .stApp {
 
 </style>
 """, unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+
+    /* HIDE DEFAULT SIDEBAR NAVIGATION */
+    [data-testid="stSidebarNav"] {
+        display: none !important;
+    }
+
+</style>
+""", unsafe_allow_html=True)
