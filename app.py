@@ -777,7 +777,7 @@ for i, insight in enumerate(insights):
                 {insight["body"]}
             </div>
             <div style='font-size:12px;color:{border};font-weight:600'>
-                💡 Rekomendasi: {insight["saran"]}
+                Rekomendasi: {insight["saran"]}
             </div>
         </div>
         """, unsafe_allow_html=True)
