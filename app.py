@@ -552,7 +552,7 @@ def generate_insights(df):
 # ============================================================
 
 with st.sidebar:
-    st.markdown("<div class='sidebar-title'>📡 Main Dashboard</div>", unsafe_allow_html=True)
+    st.markdown("<div class='sidebar-title'>Main Dashboard</div>", unsafe_allow_html=True)
     st.markdown("<div class='sidebar-sub'>PT NexWave · Jan–Feb 2026</div>", unsafe_allow_html=True)
     st.divider()
 
@@ -570,10 +570,10 @@ with st.sidebar:
 
     st.divider()
     st.markdown(
-        "<div style='font-size:11px;color:#64748B'>"
+        "<div style='font-size:11px;color:#FFFFFF'>"
         "Disusun oleh:<br>"
-        "<b style='color:#4F46E5'>Ilham Candra Harmawan.</b> · 5003231172<br>"
-        "<b style='color:#4F46E5'>Muhammad Al Fatih Nafiudin Sya'bani</b> · 5003231189</div>",
+        "<b style='color:#FFFFFF'>Ilham Candra Harmawan.</b> · 5003231172<br>"
+        "<b style='color:#FFFFFF'>Muhammad Al Fatih Nafiudin Sya'bani</b> · 5003231189</div>",
         unsafe_allow_html=True
     )
 
@@ -597,7 +597,7 @@ else:
 st.markdown("""
 <div class='dash-header'>
     <div>
-        <div class='dash-title'>📡 Main Dashboard</div>
+        <div class='dash-title'>Main Dashboard</div>
         <div class='dash-sub'>Multi-Project Network Performance Monitoring System · PT NexWave</div>
     </div>
     <div class='dash-badge'>
@@ -614,7 +614,7 @@ st.markdown("""
 
 st.markdown("<div class='section-title'>Executive Summary</div>", unsafe_allow_html=True)
 
-tab_avg, tab_med = st.tabs(["📊 Average", "📈 Median"])
+tab_avg, tab_med = st.tabs(["Average", "Median"])
 
 def get_kpi_color(kpi, value):
     """Return hex warna sesuai colour palette kantor untuk tiap nilai KPI."""
