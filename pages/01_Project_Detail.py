@@ -351,10 +351,10 @@ with st.sidebar:
     else:
         all_projects = sorted(df_all["Project_Clean"].unique().tolist())
 
-        st.markdown("**📌 Project Spesifik**")
+        st.markdown("**Project Spesifik**")
         selected_project = st.selectbox("Pilih Project", all_projects)
 
-        st.markdown("**📈 KPI yang ditampilkan**")
+        st.markdown("**KPI yang ditampilkan**")
         selected_kpi = st.selectbox("Pilih KPI", NUMERIC_KPIS)
 
         all_modes    = ["Semua"] + sorted(df_all["Mode"].dropna().unique().tolist())
