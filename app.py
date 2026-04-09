@@ -828,3 +828,8 @@ body, .stApp {
 
 </style>
 """, unsafe_allow_html=True)
+
+/* HIDE DEFAULT SIDEBAR NAVIGATION */
+[data-testid="stSidebarNav"] {
+    display: none !important;
+}
