@@ -551,7 +551,18 @@ def generate_insights(df):
 # BAGIAN 7 — SIDEBAR
 # ============================================================
 
+current_page = st.get_page_config()["page_title"]
 with st.sidebar:
+    st.markdown("<div class='sidebar-title'>Menu Utama</div>", unsafe_allow_html=True)
+    if current_page == "Main Dashboard":
+        st.markdown("**Main Dashboard**")
+    else:
+        st.page_link("app.py", label="Main Dashboard")
+
+    if current_page == "Project Detail":
+        st.markdown("**Project Detail**")
+    else:
+        st.page_link("pages/01_Project_Detail.py", label="📁 Project Detail")
     st.markdown("### Menu Utama")
     st.markdown("<div class='sidebar-title'>Main Dashboard</div>", unsafe_allow_html=True)
     st.markdown("<div class='sidebar-sub'>PT NexWave · Jan–Feb 2026</div>", unsafe_allow_html=True)
