@@ -729,6 +729,7 @@ for kpi, info in KPI_INFO.items():
         # OPTIONAL: grafik
         if info["numeric"] and not df_all.empty and kpi in df_all["KPI_NAME"].values:
             st.markdown("---")
+            
             st.markdown(f"** Rata-rata {kpi} per Project**")
 
             df_kpi_all = df_all[df_all["KPI_NAME"] == kpi].copy()
