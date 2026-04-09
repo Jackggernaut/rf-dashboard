@@ -334,7 +334,6 @@ Berbeda dengan RSRP dan RSRQ, SINR bisa bernilai positif. Nilai di atas 20 dB sa
     "Throughput": {
         "full"    : "Data Transfer Rate (Actual)",
         "color"   : "#2E00FE",
-        "unit"    : "Mbps",
         "desc"    : """
         
 **Apa itu Throughput?**
