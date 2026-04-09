@@ -103,13 +103,13 @@ st.markdown("""
     }
 
     /* Background utama */
-    [data-testid="stAppViewContainer"] { background-color: #F0F2F8 !important; }
+    [data-testid="stAppViewContainer"] { background-color: #1f49c4 !important; }
     [data-testid="stSidebar"],
     [data-testid="stSidebar"] > div,
     [data-testid="stSidebar"] > div:first-child,
     [data-testid="stSidebarContent"],
     section[data-testid="stSidebar"] {
-        background-color: #EEF2FF !important;
+        background-color: #1f49c4 !important;
         border-right: 1px solid #C7D2FE !important;
     }
     [data-testid="stHeader"]           { background-color: #F0F2F8 !important; }
