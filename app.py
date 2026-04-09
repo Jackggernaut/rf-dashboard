@@ -109,7 +109,7 @@ st.markdown("""
     [data-testid="stSidebar"] > div:first-child,
     [data-testid="stSidebarContent"],
     section[data-testid="stSidebar"] {
-        background-color: #1f49c4 !important;
+        background-color: #a4e5fc !important;
         border-right: 1px solid #C7D2FE !important;
     }
     [data-testid="stHeader"]           { background-color: #F0F2F8 !important; }
