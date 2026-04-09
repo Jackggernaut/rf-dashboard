@@ -412,7 +412,7 @@ else:
 st.markdown(f"""
 <div class='dash-header'>
     <div>
-        <div class='dash-title'>📊 Project Detail &amp; Comparison</div>
+        <div class='dash-title'>Project Detail &amp; Comparison</div>
         <div class='dash-sub'>Analisis Spesifik Per Project · RF Network Testing · PT NexWave</div>
     </div>
     <div style='background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);
@@ -433,7 +433,7 @@ if not df_proj.empty:
         unsafe_allow_html=True
     )
 
-    tab_avg, tab_med = st.tabs(["📊 Average", "📈 Median"])
+    tab_avg, tab_med = st.tabs(["Average", "Median"])
 
     def render_proj_cards(agg_func):
         cols = st.columns(len(NUMERIC_KPIS))
@@ -466,7 +466,7 @@ if not df_kpi.empty:
         unsafe_allow_html=True
     )
 
-    tab_count, tab_pct = st.tabs(["🔢 Count", "📊 Percentage"])
+    tab_count, tab_pct = st.tabs(["Count", "Percentage"])
 
     dist = df_kpi["Label"].value_counts().reset_index()
     dist.columns = ["Kategori", "Count"]
@@ -638,7 +638,7 @@ if not df_kpi.empty and selected_kpi in THRESHOLDS_3GPP:
 
     with col_bad:
         st.markdown(
-            "<div style='font-size:14px;font-weight:700;color:#DC2626;margin-bottom:8px'>🔴 Bad Spot — 10 Titik Terburuk</div>",
+            "<div style='font-size:14px;font-weight:700;color:#DC2626;margin-bottom:8px'>Bad Spot — 10 Titik Terburuk</div>",
             unsafe_allow_html=True
         )
         for _, row in df_bad.iterrows():
@@ -658,7 +658,7 @@ if not df_kpi.empty and selected_kpi in THRESHOLDS_3GPP:
 
     with col_good:
         st.markdown(
-            "<div style='font-size:14px;font-weight:700;color:#16A34A;margin-bottom:8px'>🟢 Good Spot — 10 Titik Terbaik</div>",
+            "<div style='font-size:14px;font-weight:700;color:#16A34A;margin-bottom:8px'>Good Spot — 10 Titik Terbaik</div>",
             unsafe_allow_html=True
         )
         for _, row in df_good.iterrows():
@@ -704,7 +704,7 @@ if not df_all.empty and compare_projects:
     )
 
     if not df_cmp.empty:
-        tab_box, tab_bar, tab_violin = st.tabs(["📦 Box Plot", "📊 Bar Chart", "🎻 Violin Plot"])
+        tab_box, tab_bar, tab_violin = st.tabs(["Box Plot", "Bar Chart", "Violin Plot"])
 
         with tab_box:
             st.markdown(f"<div style='font-size:13px;font-weight:600;color:#374151;margin-bottom:4px'>Sebaran {compare_kpi} per Project</div>", unsafe_allow_html=True)
