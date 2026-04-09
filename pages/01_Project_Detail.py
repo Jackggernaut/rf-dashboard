@@ -333,7 +333,7 @@ def get_color_map_for_kpi(kpi):
 current_page = os.path.basename(__file__)
 
 with st.sidebar:
-    st.markdown("<div class='sidebar-title'>**Menu Utama**</div>", unsafe_allow_html=True)
+    st.markdown("<div class='sidebar-title' style='font-weight:800'>Menu Utama</div>", unsafe_allow_html=True)
     
     if current_page == "Main Dashboard":
         st.markdown("**Main Dashboard**")
