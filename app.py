@@ -551,7 +551,7 @@ def generate_insights(df):
 # BAGIAN 7 — SIDEBAR
 # ============================================================
 
-current_page = st.get_page_config()["page_title"]
+current_page = os.path.basename(__file__)
 with st.sidebar:
     st.markdown("<div class='sidebar-title'>Menu Utama</div>", unsafe_allow_html=True)
     if current_page == "Main Dashboard":
