@@ -330,28 +330,16 @@ def get_color_map_for_kpi(kpi):
 # BAGIAN 7 — SIDEBAR
 # ============================================================
 
-# ============================================================
-# BAGIAN 7 — SIDEBAR
-# ============================================================
-
-# ============================================================
-# BAGIAN 7 — SIDEBAR
-# ============================================================
-
 current_page = "Project Detail"
 
 with st.sidebar:
     st.markdown("<div class='sidebar-title'>Menu Utama</div>", unsafe_allow_html=True)
     
-    if current_page == "Main Dashboard":
-        st.markdown("**Main Dashboard**")
-    else:
-        st.page_link("app.py", label="Main Dashboard")
+    # Main Dashboard - link biasa
+    st.page_link("app.py", label="Main Dashboard")
     
-    if current_page == "Project Detail":
-        st.markdown("**Project Detail**")
-    else:
-        st.page_link("pages/01_Project_Detail.py", label="Project Detail")
+    # Project Detail - bold karena halaman aktif
+    st.markdown("**Project Detail**")
     
     st.divider()
 
@@ -366,22 +354,23 @@ with st.sidebar:
         all_projects = sorted(df_all["Project_Clean"].unique().tolist())
 
         st.markdown("**Project Spesifik**")
-        selected_project = st.selectbox("Pilih Project", all_projects)
+        selected_project = st.selectbox("Pilih Project", all_projects, label_visibility="collapsed")
 
         st.markdown("**KPI yang ditampilkan**")
-        selected_kpi = st.selectbox("Pilih KPI", NUMERIC_KPIS)
+        selected_kpi = st.selectbox("Pilih KPI", NUMERIC_KPIS, label_visibility="collapsed")
 
         all_modes    = ["Semua"] + sorted(df_all["Mode"].dropna().unique().tolist())
-        selected_mode = st.selectbox("Filter Mode", all_modes)
+        selected_mode = st.selectbox("Filter Mode", all_modes, label_visibility="collapsed")
 
         st.divider()
         st.markdown("**Comparison**")
         compare_projects = st.multiselect(
             "Pilih Project untuk dibandingkan",
             all_projects,
-            default=all_projects[:3] if len(all_projects) >= 3 else all_projects
+            default=all_projects[:3] if len(all_projects) >= 3 else all_projects,
+            label_visibility="collapsed"
         )
-        compare_kpi = st.selectbox("KPI Comparison", NUMERIC_KPIS, key="cmp_kpi")
+        compare_kpi = st.selectbox("KPI Comparison", NUMERIC_KPIS, key="cmp_kpi", label_visibility="collapsed")
 
     st.divider()
     st.markdown(
