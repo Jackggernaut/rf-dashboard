@@ -90,7 +90,7 @@ st.markdown("""
     details > summary::-webkit-details-marker { display: none !important; }
 
     [data-testid="stAppViewContainer"] { background-color: #F0F2F8 !important; }
-    [data-testid="stSidebar"]          { background-color: #EEF2FF !important; border-right: 1px solid #E2E8F0 !important; }
+    [data-testid="stSidebar"]          { background-color: #a4e5fc !important; border-right: 1px solid #E2E8F0 !important; }
     [data-testid="stHeader"]           { background-color: #F0F2F8 !important; }
 
     /* Override teks agar tidak ikut dark mode */
