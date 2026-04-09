@@ -552,6 +552,7 @@ def generate_insights(df):
 # ============================================================
 
 with st.sidebar:
+    st.markdown("### Menu Utama")
     st.markdown("<div class='sidebar-title'>Main Dashboard</div>", unsafe_allow_html=True)
     st.markdown("<div class='sidebar-sub'>PT NexWave · Jan–Feb 2026</div>", unsafe_allow_html=True)
     st.divider()
