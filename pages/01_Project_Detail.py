@@ -371,7 +371,7 @@ with st.sidebar:
 
     st.divider()
     st.markdown(
-        "<div style='font-size:11px;color:#64748B'>"
+        "<div style='font-size:11px;color:#000000'>"
         "Ilham Candra Harmawan · 5003231172<br>Muhammad Al Fatih Nafiudin Sya'bani · 5003231189"
         "</div>",
         unsafe_allow_html=True
