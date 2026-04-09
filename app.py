@@ -47,7 +47,7 @@ st.markdown("""
 
     /* ─── FORCE LIGHT MODE — override dark theme ─── */
     .stApp {
-    background-color: #F0F2F8;
+    background-color: #1f49c4;
     }
 
     /* DM Sans untuk semua teks */
