@@ -332,11 +332,11 @@ def get_color_map_for_kpi(kpi):
 
 with st.sidebar:
     st.markdown(
-        "<div style='font-size:16px;font-weight:800;color:#1E1B4B;margin-bottom:4px'>📊 Project Detail</div>",
+        "<div style='font-size:16px;font-weight:800;color:#000000;margin-bottom:4px'>Project Detail</div>",
         unsafe_allow_html=True
     )
     st.markdown(
-        "<div style='font-size:11px;color:#64748B;margin-bottom:16px'>PT NexWave · Jan–Feb 2026</div>",
+        "<div style='font-size:11px;color:#000000;margin-bottom:16px'>PT NexWave · Jan–Feb 2026</div>",
         unsafe_allow_html=True
     )
     st.divider()
@@ -361,7 +361,7 @@ with st.sidebar:
         selected_mode = st.selectbox("Filter Mode", all_modes)
 
         st.divider()
-        st.markdown("**⚖️ Comparison**")
+        st.markdown("**Comparison**")
         compare_projects = st.multiselect(
             "Pilih Project untuk dibandingkan",
             all_projects,
