@@ -255,13 +255,13 @@ st.markdown("""
 
     /* Sidebar text */
     .sidebar-title { font-size: 18px; font-weight: 800; color: #FFFFFF !important; margin-bottom: 4px; }
-    .sidebar-sub   { font-size: 11px; color: #64748B !important; margin-bottom: 16px; }
+    .sidebar-sub   { font-size: 14px; color: #FFFFFF !important; margin-bottom: 16px; }
 
     /* Semua markdown text di dalam expander agar tidak dark */
     .stExpander p, .stExpander li, .stExpander span {
-        color: #374151 !important;
+        color: #FFFFFF !important;
     }
-    .stExpander strong { color: #1E1B4B !important; }
+    .stExpander strong { color: #FFFFFF !important; }
 </style>
 """, unsafe_allow_html=True)
 
