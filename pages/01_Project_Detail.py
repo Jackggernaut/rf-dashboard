@@ -330,19 +330,28 @@ def get_color_map_for_kpi(kpi):
 # BAGIAN 7 — SIDEBAR
 # ============================================================
 
+# ============================================================
+# BAGIAN 7 — SIDEBAR
+# ============================================================
+
 current_page = os.path.basename(__file__)
+
 with st.sidebar:
-    with st.sidebar:
+
     st.markdown("<div class='sidebar-title'>Menu Utama</div>", unsafe_allow_html=True)
-    if current_page == "Main Dashboard":
+
+    # Navigation
+    if current_page == "app.py":
         st.markdown("**Main Dashboard**")
     else:
         st.page_link("app.py", label="Main Dashboard")
 
-    if current_page == "Project Detail":
+    if current_page == "01_Project_Detail.py":
         st.markdown("**Project Detail**")
     else:
         st.page_link("pages/01_Project_Detail.py", label="Project Detail")
+
+    # Title project
     st.markdown(
         "<div style='font-size:16px;font-weight:800;color:#000000;margin-bottom:4px'>Project Detail</div>",
         unsafe_allow_html=True
@@ -351,6 +360,7 @@ with st.sidebar:
         "<div style='font-size:11px;color:#000000;margin-bottom:16px'>PT NexWave · Jan–Feb 2026</div>",
         unsafe_allow_html=True
     )
+
     st.divider()
 
     if df_all.empty:
