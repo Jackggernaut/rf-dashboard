@@ -334,36 +334,25 @@ def get_color_map_for_kpi(kpi):
 # BAGIAN 7 — SIDEBAR
 # ============================================================
 
-current_page = "Project Detail"   # ⬅️ PENTING: samakan dengan app.py
+# ============================================================
+# BAGIAN 7 — SIDEBAR
+# ============================================================
+
+current_page = "Project Detail"
 
 with st.sidebar:
     st.markdown("<div class='sidebar-title'>Menu Utama</div>", unsafe_allow_html=True)
-
+    
     if current_page == "Main Dashboard":
         st.markdown("**Main Dashboard**")
     else:
         st.page_link("app.py", label="Main Dashboard")
-
+    
     if current_page == "Project Detail":
         st.markdown("**Project Detail**")
     else:
         st.page_link("pages/01_Project_Detail.py", label="Project Detail")
-
-    st.markdown("<div class='sidebar-title'>Project Detail</div>", unsafe_allow_html=True)
-    st.markdown("<div class='sidebar-sub'>PT NexWave · Jan–Feb 2026</div>", unsafe_allow_html=True)
-
-    st.divider()
-
-    # ===== HEADER PAGE =====
-    st.markdown(
-        "<div style='font-size:16px;font-weight:800;color:#1E1B4B;margin-bottom:2px'>Project Detail</div>",
-        unsafe_allow_html=True
-    )
-    st.markdown(
-        "<div style='font-size:11px;color:#64748B;margin-bottom:14px'>PT NexWave · Jan–Feb 2026</div>",
-        unsafe_allow_html=True
-    )
-
+    
     st.divider()
 
     if df_all.empty:
@@ -398,8 +387,8 @@ with st.sidebar:
     st.markdown(
         "<div style='font-size:11px;color:#000000'>"
         "Disusun oleh:<br>"
-        "<b style='color:#000000'> Ilham Candra Harmawan </b> · 5003231172<br>"
-        "<b style='color:#000000'> Muhammad Al Fatih Nafiudin Sya'bani </b> · 5003231189"
+        "<b style='color:#000000'>Ilham Candra Harmawan</b> · 5003231172<br>"
+        "<b style='color:#000000'>Muhammad Al Fatih Nafiudin Sya'bani</b> · 5003231189"
         "</div>",
         unsafe_allow_html=True
     )
