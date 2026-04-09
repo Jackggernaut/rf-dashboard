@@ -149,7 +149,7 @@ st.markdown("""
 
     /* Kartu metrik */
     .metric-card {
-        background: #FFFFFF !important;
+        background:  !important;
         border: 1px solid #E2E8F0;
         border-radius: 14px;
         padding: 18px 20px;
@@ -254,14 +254,14 @@ st.markdown("""
     }
 
     /* Sidebar text */
-    .sidebar-title { font-size: 18px; font-weight: 800; color: #FFFFFF !important; margin-bottom: 4px; }
-    .sidebar-sub   { font-size: 14px; color: #FFFFFF !important; margin-bottom: 16px; }
+    .sidebar-title { font-size: 18px; font-weight: 800; color: #000000 !important; margin-bottom: 4px; }
+    .sidebar-sub   { font-size: 14px; color: #000000 !important; margin-bottom: 16px; }
 
     /* Semua markdown text di dalam expander agar tidak dark */
     .stExpander p, .stExpander li, .stExpander span {
-        color: #FFFFFF !important;
+        color: #000000 !important;
     }
-    .stExpander strong { color: #FFFFFF !important; }
+    .stExpander strong { color: #000000 !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -572,8 +572,8 @@ with st.sidebar:
     st.markdown(
         "<div style='font-size:11px;color:#000000'>"
         "Disusun oleh:<br>"
-        "<b style='color:#FFFFFF'>Ilham Candra Harmawan.</b> · 5003231172<br>"
-        "<b style='color:#FFFFFF'>Muhammad Al Fatih Nafiudin Sya'bani</b> · 5003231189</div>",
+        "<b style='color:#000000'>Ilham Candra Harmawan.</b> · 5003231172<br>"
+        "<b style='color:#000000'>Muhammad Al Fatih Nafiudin Sya'bani</b> · 5003231189</div>",
         unsafe_allow_html=True
     )
 
