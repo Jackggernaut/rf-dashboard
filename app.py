@@ -254,7 +254,7 @@ st.markdown("""
     }
 
     /* Sidebar text */
-    .sidebar-title { font-size: 16px; font-weight: 800; color: #1E1B4B !important; margin-bottom: 4px; }
+    .sidebar-title { font-size: 18px; font-weight: 800; color: #FFFFFF !important; margin-bottom: 4px; }
     .sidebar-sub   { font-size: 11px; color: #64748B !important; margin-bottom: 16px; }
 
     /* Semua markdown text di dalam expander agar tidak dark */
