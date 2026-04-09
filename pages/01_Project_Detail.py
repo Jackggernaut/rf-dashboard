@@ -334,28 +334,24 @@ def get_color_map_for_kpi(kpi):
 # BAGIAN 7 — SIDEBAR
 # ============================================================
 
-current_page = os.path.basename(__file__)
+current_page = "Project Detail"   # ⬅️ PENTING: samakan dengan app.py
 
 with st.sidebar:
+    st.markdown("<div class='sidebar-title'>Menu Utama</div>", unsafe_allow_html=True)
 
-    # ===== MENU UTAMA =====
-    st.markdown(
-        "<div style='font-size:13px;font-weight:700;color:#4F46E5;margin-bottom:12px;letter-spacing:0.5px'>MENU UTAMA</div>",
-        unsafe_allow_html=True
-    )
-
-    # Navigation
-    if current_page == "app.py":
-        st.markdown("<div style='font-weight:700;color:#1E1B4B'>Main Dashboard</div>", unsafe_allow_html=True)
+    if current_page == "Main Dashboard":
+        st.markdown("**Main Dashboard**")
     else:
         st.page_link("app.py", label="Main Dashboard")
 
-    if current_page == "01_Project_Detail.py":
-        st.markdown("<div style='font-weight:700;color:#1E1B4B'>Project Detail</div>", unsafe_allow_html=True)
+    if current_page == "Project Detail":
+        st.markdown("**Project Detail**")
     else:
         st.page_link("pages/01_Project_Detail.py", label="Project Detail")
 
-    st.markdown("<div style='margin-top:6px'></div>", unsafe_allow_html=True)
+    st.markdown("<div class='sidebar-title'>Project Detail</div>", unsafe_allow_html=True)
+    st.markdown("<div class='sidebar-sub'>PT NexWave · Jan–Feb 2026</div>", unsafe_allow_html=True)
+
     st.divider()
 
     # ===== HEADER PAGE =====
