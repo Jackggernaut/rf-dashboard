@@ -562,8 +562,7 @@ with st.sidebar:
     if current_page == "Project Detail":
         st.markdown("**Project Detail**")
     else:
-        st.page_link("pages/01_Project_Detail.py", label="📁 Project Detail")
-    st.markdown("### Menu Utama")
+        st.page_link("pages/01_Project_Detail.py", label="Project Detail")
     st.markdown("<div class='sidebar-title'>Main Dashboard</div>", unsafe_allow_html=True)
     st.markdown("<div class='sidebar-sub'>PT NexWave · Jan–Feb 2026</div>", unsafe_allow_html=True)
     st.divider()
