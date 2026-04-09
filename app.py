@@ -103,7 +103,7 @@ st.markdown("""
     }
 
     /* Background utama */
-    [data-testid="stAppViewContainer"] { background-color: #1f49c4 !important; }
+    [data-testid="stAppViewContainer"] { background-color: #EEF2FF !important; }
     [data-testid="stSidebar"],
     [data-testid="stSidebar"] > div,
     [data-testid="stSidebar"] > div:first-child,
