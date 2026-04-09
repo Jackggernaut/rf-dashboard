@@ -34,6 +34,29 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+    /* SIDEBAR TITLE */
+    .sidebar-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #4F46E5;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        margin-top: 4px;
+        }
+
+    /* SIDEBAR SUBTITLE */
+        .sidebar-sub {
+        font-size: 11px;
+        color: #64748B;
+        margin-bottom: 14px;
+        }
+
+    /* RAPIIIN ITEM MENU */
+    [data-testid="stSidebar"] .stPageLink,
+    [data-testid="stSidebar"] p {
+        font-size: 13px;
+        margin-left: 4px;
+    }
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap');
 
     /* ─── FORCE LIGHT MODE ─── */
