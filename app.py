@@ -570,7 +570,7 @@ with st.sidebar:
 
     st.divider()
     st.markdown(
-        "<div style='font-size:11px;color:#FFFFFF'>"
+        "<div style='font-size:11px;color:#000000'>"
         "Disusun oleh:<br>"
         "<b style='color:#FFFFFF'>Ilham Candra Harmawan.</b> · 5003231172<br>"
         "<b style='color:#FFFFFF'>Muhammad Al Fatih Nafiudin Sya'bani</b> · 5003231189</div>",
