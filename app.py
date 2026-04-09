@@ -674,7 +674,8 @@ def render_summary_cards(agg_func):
         <div class='metric-card'>
             <div class='metric-label'>{kpi}</div>
             <div class='metric-value' style='color:{get_kpi_color(kpi, val)}'>{val_str}</div>
-            <div class='metric-unit'>{info["unit"]}</div>
+            unit = "" if kpi == "Throughput" else info["unit"]
+            <div class='metric-unit'>{unit}</div>
         </div>
         """, unsafe_allow_html=True)
 
